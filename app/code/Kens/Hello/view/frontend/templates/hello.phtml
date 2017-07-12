@@ -1,0 +1,36 @@
+<h1><?php echo "test" ?></h1>
+<form class="form" id="custom-form" method="post" autocomplete="off" action="hello/index/post">
+   <fieldset class="fieldset">
+       <legend class="legend"><span><?php echo __('Quick Add') ?></span></legend><br>
+        <div class="field required">
+            <label for="email_address" class="label"><span><?php echo __('Sku') ?></span></label>
+            <div class="control">
+                <input type="text" name="sku_test" id="sku" value="" title="<?php echo __('Sku') ?>" class="input-text" data-validate="{'required-entry':true}">
+            </div>
+        </div>
+		<div class="field required">
+            <label for="email_address" class="label"><span><?php echo __('Qty') ?></span></label>
+            <div class="control">
+                <input type="text" name="qty_test" id="qty" value="" title="<?php echo __('Qty') ?>" class="input-text" data-validate="{'required-entry':true}">
+            </div>
+        </div>
+   </fieldset>
+   <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+        </div>
+    </div>
+</form>
+<script type="text/x-magento-init">
+    {
+        "#custom-form": {
+            "validation": {}
+        }
+    }
+</script>
+<style>
+.field.required {
+    width: 30%;
+	float: left;
+}
+</style>

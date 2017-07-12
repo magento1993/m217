@@ -1,0 +1,8 @@
+<?php 
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+    echo $product->getSku() . '<br />';
+	echo $product->getId() . '<br />';;
+    echo $product->getName();
+	
+?>
