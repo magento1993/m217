@@ -1,8 +1,12 @@
+1234
 <?php 
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
+    
     $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+    $pid = $product->getId();
     echo $product->getSku() . '<br />';
-	echo $product->getId() . '<br />';;
-    echo $product->getName();
-	
+	echo  $pid. '<br />';
+    echo $product->getName(). '<br />';
+	echo $StockState->getStockQty($pid);
 ?>
